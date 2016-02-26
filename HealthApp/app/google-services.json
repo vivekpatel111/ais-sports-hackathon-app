@@ -1,0 +1,55 @@
+{
+	"project_info": {
+		"project_id": "healthapp1-eaad0",
+		"project_number": "356995219243",
+		"name": "HealthApp1"
+	},
+	"client": [
+		{
+			"client_info": {
+				"mobilesdk_app_id": "1:356995219243:android:89d30f13b09a46f1",
+				"client_id": "android:hack.sport.healthapp",
+				"client_type": 1,
+				"android_client_info": {
+					"package_name": "hack.sport.healthapp"
+				}
+			},
+			"oauth_client": [
+				{
+					"client_id": "356995219243-cb0gvqj5sjth4ir45o5o8h3jnloe7iu9.apps.googleusercontent.com",
+					"client_type": 1,
+					"android_info": {
+						"package_name": "hack.sport.healthapp",
+						"certificate_hash": "BB37C0FA290BEA84535BFD2AFDC6B0BDDB5114E3"
+					}
+				},
+				{
+					"client_id": "356995219243-5imse1lub9e6r8hr2c4o2snnlkhc3vhm.apps.googleusercontent.com",
+					"client_type": 3
+				}
+			],
+			"api_key": [],
+			"services": {
+				"analytics_service": {
+					"status": 1
+				},
+				"cloud_messaging_service": {
+					"status": 1,
+					"apns_config": []
+				},
+				"appinvite_service": {
+					"status": 1,
+					"other_platform_oauth_client": []
+				},
+				"google_signin_service": {
+					"status": 2
+				},
+				"ads_service": {
+					"status": 1
+				}
+			}
+		}
+	],
+	"client_info": [],
+	"ARTIFACT_VERSION": "1"
+}
