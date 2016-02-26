@@ -13,9 +13,14 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.plus.People;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.PersonBuffer;
+
 
 /**
  * Activity to demonstrate basic retrieval of the Google user's ID, email address, and basic
@@ -23,7 +28,8 @@ import com.google.android.gms.common.api.ResultCallback;
  */
 public class SignInActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener,
-        View.OnClickListener {
+        View.OnClickListener,
+        ResultCallback<People.LoadPeopleResult>{
 
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -49,10 +55,20 @@ public class SignInActivity extends AppCompatActivity implements
         // [START build_client]
         // Build a GoogleApiClient with access to the Google Sign-In API and the
         // options specified by gso.
+        /*mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this *//* FragmentActivity *//*, this *//* OnConnectionFailedListener *//*)
+                .addApi(Plus.API)
+                .addScope(Scopes.PLUS_LOGIN)
+                .addScope(Scopes.PLUS_ME)
+                .build();*/
         mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
+                .enableAutoManage(this /* FragmentActivity */,
+                                  this /* OnConnectionFailedListener */)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .addApi(Plus.API)
                 .build();
+
+
         // [END build_client]
 
         // [START customize_button]
@@ -116,6 +132,14 @@ public class SignInActivity extends AppCompatActivity implements
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
             Toast.makeText(this, acct.getDisplayName(), Toast.LENGTH_SHORT).show();
+            Log.d(TAG, acct.getGrantedScopes().toString());
+            Log.d(TAG, acct.getDisplayName().toString());
+            Log.d(TAG, acct.getEmail().toString());
+            Log.d(TAG, acct.getId().toString());
+            //Log.d(TAG, acct.getIdToken());
+            Log.d(TAG, acct.getPhotoUrl().toString());
+
+            //Plus.PeopleApi.loadVisible(mGoogleApiClient, null).setResultCallback(this);
         } else {
             // Signed out, show unauthenticated UI.
             Toast.makeText(this, "fata", Toast.LENGTH_SHORT).show();
@@ -143,6 +167,23 @@ public class SignInActivity extends AppCompatActivity implements
             case R.id.sign_in_button:
                 signIn();
                 break;
+        }
+    }
+
+    @Override
+    public void onResult(People.LoadPeopleResult peopleData) {
+        if (peopleData.getStatus().getStatusCode() == CommonStatusCodes.SUCCESS) {
+            PersonBuffer personBuffer = peopleData.getPersonBuffer();
+            try {
+                int count = personBuffer.getCount();
+                for (int i = 0; i < count; i++) {
+                    Log.d(TAG, "Display name: " + personBuffer.get(i).getDisplayName());
+                }
+            } finally {
+                personBuffer.release();
+            }
+        } else {
+            Log.e(TAG, "Error requesting visible circles: " + peopleData.getStatus());
         }
     }
 }
