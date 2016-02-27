@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MissionDecisionActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "ProfileInfoActivity";
+    private static final String TAG = "MissionDecisionActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,9 @@ public class MissionDecisionActivity extends AppCompatActivity implements View.O
 
     private void changeIntent(boolean isHavingMission) {
         if (isHavingMission) {
-            startActivity(new Intent(this, MissionChooserActivity.class));
+            Intent missionIntent = new Intent(this, MissionInfoActivity.class);
+            missionIntent.putExtra("mission", "swimming");
+            startActivity(missionIntent);
         } else {
 
         }

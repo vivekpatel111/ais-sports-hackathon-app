@@ -33,10 +33,7 @@
         </activity>
         <activity android:name=".ProfileInfoActivity" />
         <activity android:name=".MissionDecisionActivity" />
-        <activity
-            android:name=".MissionChooserActivity"
-            android:label="@string/title_activity_mission_chooser"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".MissionInfoActivity"></activity>
     </application>
 
 </manifest>
