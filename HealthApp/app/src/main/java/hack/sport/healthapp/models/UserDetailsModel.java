@@ -1,4 +1,4 @@
-package hack.sport.healthapp.hack.sport.healthapp.models;
+package hack.sport.healthapp.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

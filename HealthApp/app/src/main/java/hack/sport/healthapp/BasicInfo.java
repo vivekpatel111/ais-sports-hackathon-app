@@ -11,8 +11,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import hack.sport.healthapp.hack.sport.healthapp.models.MetricsModel;
-import hack.sport.healthapp.hack.sport.healthapp.models.UserDetailsModel;
+import hack.sport.healthapp.models.MetricsModel;
+import hack.sport.healthapp.models.UserDetailsModel;
 
 public class BasicInfo extends AppCompatActivity implements View.OnClickListener{
 

@@ -1,4 +1,4 @@
-package hack.sport.healthapp.hack.sport.healthapp.models;
+package hack.sport.healthapp.models;
 
 public class MetricsModel {
 
