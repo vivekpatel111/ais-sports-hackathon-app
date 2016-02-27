@@ -11,12 +11,15 @@ import java.util.HashMap;
  */
 public class UserDetailsModel implements Parcelable {
 
+    public static UserDetailsModel userData = new UserDetailsModel();
+
     private String userToken;
     private String googleUserId;
     private String serverAuthCode;
     private String emailID;
     private String userName;
     private String DOB;
+    private double age;
     private String imageUrl;
     private ArrayList<String> diseases;
     private HashMap<String, String> location;
@@ -28,9 +31,10 @@ public class UserDetailsModel implements Parcelable {
     public UserDetailsModel() {
     }
 
-    public UserDetailsModel(String imageUrl, String serverAuthCode, String userToken, String googleUserId, String emailID, String userName, String DOB, ArrayList<String> diseases, HashMap<String, String> location, String goals, boolean term_accpeptance, MetricsModel height, MetricsModel weight) {
+    public UserDetailsModel(double age, String imageUrl, String serverAuthCode, String userToken, String googleUserId, String emailID, String userName, String DOB, ArrayList<String> diseases, HashMap<String, String> location, String goals, boolean term_accpeptance, MetricsModel height, MetricsModel weight) {
         this.serverAuthCode = serverAuthCode;
         this.userToken = userToken;
+        this.age = age;
         this.googleUserId = googleUserId;
         this.emailID = emailID;
         this.userName = userName;
@@ -186,7 +190,15 @@ public class UserDetailsModel implements Parcelable {
         dest.writeString(this.googleUserId);
     }
 
-   /* public static final Creator<CategoryModel> CREATOR = new Creator<CategoryModel>() {
+    public double getAge() {
+        return age;
+    }
+
+    public void setAge(double age) {
+        this.age = age;
+    }
+
+    /* public static final Creator<CategoryModel> CREATOR = new Creator<CategoryModel>() {
         public CategoryModel createFromParcel(Parcel source) {
             return new CategoryModel(source);
         }
