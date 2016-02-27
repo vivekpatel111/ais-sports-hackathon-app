@@ -139,6 +139,7 @@ public class SignInActivity extends AppCompatActivity implements
             //Log.d(TAG, acct.getIdToken());
             Log.d(TAG, acct.getPhotoUrl().toString());
 
+            startActivity(new Intent(this, BasicInfo.class));
             //Plus.PeopleApi.loadVisible(mGoogleApiClient, null).setResultCallback(this);
         } else {
             // Signed out, show unauthenticated UI.

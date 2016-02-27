@@ -28,7 +28,8 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".BasicInfo" />
-        <activity android:name=".GoalsActivity"></activity>
+        <activity android:name=".GoalsActivity" />
+        <activity android:name=".FriendsActivity"></activity>
     </application>
 
 </manifest>
