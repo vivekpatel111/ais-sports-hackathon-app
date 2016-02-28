@@ -141,7 +141,7 @@ public class LoginActivity extends AppCompatActivity implements
 
             DbHelper dbHelper = new DbHelper(this);
            // dbHelper.insertCustomerDetails(userDetailsModel);
-            startActivity(new Intent(this, Dashboard.class));
+            startActivity(new Intent(this, ProfileInfoActivity.class));
         } else {
             // Signed out, show unauthenticated UI.
             Toast.makeText(this, "Auth Failed", Toast.LENGTH_SHORT).show();

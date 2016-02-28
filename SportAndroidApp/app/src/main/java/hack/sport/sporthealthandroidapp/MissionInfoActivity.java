@@ -1,5 +1,6 @@
 package hack.sport.sporthealthandroidapp;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,24 +40,24 @@ public class MissionInfoActivity extends AppCompatActivity implements View.OnCli
         EditText goal = (EditText) findViewById(R.id.missionGoalCount);
         EditText days = (EditText) findViewById(R.id.missionDays);
 
-        Integer goalCount, daysCount;
+        String goalCount, daysCount;
         if (!goal.getText().toString().equals("")) {
-            goalCount = Integer.parseInt(goal.getText().toString());
+            goalCount = goal.getText().toString();
         } else {
             Toast.makeText(this, "Please select your goal.", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (!days.getText().toString().equals("")) {
-            daysCount = Integer.parseInt(days.getText().toString());
+            daysCount = days.getText().toString();
         } else {
             Toast.makeText(this, "Please select days.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        String data = "{\"type\": \"" + type + "\",\"goal\": " + goalCount +
-                ",\"days\": " + daysCount + " }";
-        UserDetailsModel.userData.setGoals(data);
-
+       // UserDetailsModel.userData.setGoals(data);
+        Intent processingIntent = new Intent(this,
+                UserHeatGoogleMap.class);
+        startActivity(processingIntent);
     }
 }

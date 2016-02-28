@@ -130,8 +130,7 @@ public class UserGoogleMapActivity extends MapsActivity implements ClusterManage
                 .add(new LatLng(21.291, -157.821))// Hawaii
                 .add(endPoint)  // Mountain View
         );
-
-
+        
         // Flat markers will rotate when the map is rotated,
         // and change perspective when the map is tilted.
 

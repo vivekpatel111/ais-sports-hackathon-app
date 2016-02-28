@@ -1,157 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="20dp">
-
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/chart1"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="20dp" />
-
+    android:layout_height="match_parent">
     <RelativeLayout
-        android:id="@+id/relativeLayout6"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/chart1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
 
-    </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/chart1"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bike_route_1" />
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_below="@+id/relativeLayout6"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/imageView3"
-        android:layout_toRightOf="@+id/imageView3"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bike_route_2" />
+        <RelativeLayout
+            android:id="@+id/relativeLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/chart1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/relativeLayout6"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/imageView2"
-        android:layout_toRightOf="@+id/imageView2"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bike_route_4" />
+        </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView3"
-        android:background="#4d5aa2"
-        android:padding="40dp"
-        android:text="By end of week you will be 40% close to your goal "
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white"
-        android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/chart1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bike_route_1" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView7"
-        android:id="@+id/scrollView">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/relativeLayout6"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:layout_toRightOf="@+id/imageView3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bike_route_2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/relativeLayout6"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_toRightOf="@+id/imageView2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bike_route_4" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView3"
+            android:background="#4d5aa2"
+            android:padding="40dp"
+            android:text="By end of week you will be 40% close to your goal "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/imageView4"
+            android:layout_alignEnd="@+id/imageView4">
 
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                card_view:cardBackgroundColor="#ec4c4a"
-                card_view:cardCornerRadius="3dp"
-                card_view:cardElevation="4dp"
-                card_view:cardPreventCornerOverlap="true"
-                card_view:cardUseCompatPadding="true"
-                android:layout_below="@+id/textView8"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:padding="100dp"
-                    android:text="Swimming"
-                    android:textColor="@android:color/white"
-                    android:textSize="40sp" />
+        </RelativeLayout>
 
-            </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="#ec4c4a"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingTop="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Recommended Activity"
-                android:id="@+id/textView8"
-                android:textSize="30sp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_margin="20dp" />
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="80dp"
+                android:text="Swimming"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
 
+        </android.support.v7.widget.CardView>
 
-        </RelativeLayout>
-    </ScrollView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="#F1C747"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true"
+            android:layout_below="@+id/card_view"
+            android:layout_alignLeft="@+id/imageView3"
+            android:layout_alignStart="@+id/imageView3">
 
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        card_view:cardBackgroundColor="#9476b8"
-        card_view:cardCornerRadius="3dp"
-        card_view:cardElevation="4dp"
-        card_view:cardPreventCornerOverlap="true"
-        card_view:cardUseCompatPadding="true"
-        android:layout_below="@+id/scrollView"
-        android:layout_alignLeft="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="80dp"
+                android:text="Running"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+        </android.support.v7.widget.CardView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:padding="100dp"
-            android:text="Running"
-            android:textColor="@android:color/white"
-            android:textSize="40sp" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Recommended Activity"
+            android:id="@+id/textView8"
+            android:textSize="20sp"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+</ScrollView>
 
-    </android.support.v7.widget.CardView>
-
-</RelativeLayout>

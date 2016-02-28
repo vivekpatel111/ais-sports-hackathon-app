@@ -1,5 +1,6 @@
 package hack.sport.sporthealthandroidapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -36,6 +37,14 @@ public class UserHeatGoogleMap extends MapsActivity {
 
             // Animate the change in camera view over 2 seconds
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2000, null);
+
+            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick(LatLng latLng) {
+                    Intent processingIntent = new Intent(UserHeatGoogleMap.this, UserGoogleMapActivity.class);
+                    startActivity(processingIntent);
+                }
+            });
 
         } catch (XmlPullParserException e) {
             e.printStackTrace();

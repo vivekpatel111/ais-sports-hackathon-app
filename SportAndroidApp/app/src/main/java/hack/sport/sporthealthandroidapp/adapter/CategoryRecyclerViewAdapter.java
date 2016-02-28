@@ -1,5 +1,6 @@
 package hack.sport.sporthealthandroidapp.adapter;
 
+import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -71,10 +72,13 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
     public void onBindViewHolder(ViewHolder holder, int position) {
         if(position == 0){
             holder.tvCategory.setText("Cycling");
+            holder.cardViewCategory.setBackgroundColor(Color.parseColor("#ec4c4a"));
         }else if(position == 1){
             holder.tvCategory.setText("Swimming");
+            holder.cardViewCategory.setBackgroundColor(Color.parseColor("#679aa7"));
         }else {
-            holder.tvCategory.setText("Marathon");
+            holder.tvCategory.setText("Running");
+            holder.cardViewCategory.setBackgroundColor(Color.parseColor("#9476b8"));
         }
     }
 

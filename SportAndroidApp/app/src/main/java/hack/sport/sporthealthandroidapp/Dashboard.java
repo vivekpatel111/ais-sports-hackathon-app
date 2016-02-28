@@ -312,7 +312,7 @@ public class Dashboard extends AppCompatActivity
             yVals1.add(new BarEntry(val, i));
         }
 
-        BarDataSet set1 = new BarDataSet(yVals1, "Performance");
+        BarDataSet set1 = new BarDataSet(yVals1, "Training Load");
         set1.setBarSpacePercent(35f);
 
         ArrayList<IBarDataSet> dataSets = new ArrayList<IBarDataSet>();
