@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hack.sport.healthapp.MissionInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#f5f5f5"
+        android:padding="30dp"
+        android:id="@+id/relativeLayout4">
+
+        <EditText
+            android:id="@+id/missionGoalCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="numberSigned"
+            android:paddingTop="40dp"
+            android:text="60 KM"
+            android:textStyle="normal"
+            android:fontFamily="Roboto Thin"
+            android:background="@android:color/transparent"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/missionGoalCount"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="normal"
+            android:fontFamily="Roboto Thin"
+            android:text="Cycling/Days"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:padding="30dp"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/relativeLayout5">
+
+        <EditText
+            android:id="@+id/missionDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:gravity="right"
+            android:textStyle="normal"
+            android:inputType="numberSigned"
+            android:fontFamily="Roboto Thin"
+            android:text="30 Days"
+            android:background="@android:color/transparent"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/missionDays"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:layout_marginTop="5dp"
+            android:text="Deadline"
+            android:fontFamily="Roboto Thin"
+            android:textSize="15sp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:padding="30dp"
+        android:layout_below="@+id/relativeLayout5"
+        android:layout_alignLeft="@+id/relativeLayout5"
+        android:layout_alignStart="@+id/relativeLayout5"
+        android:layout_marginTop="5dp"
+        android:id="@+id/q">
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="right"
+            android:textStyle="normal"
+            android:inputType="numberSigned"
+            android:text="15 KM/ Days"
+            android:background="@android:color/transparent"
+            android:textSize="22sp"
+            android:fontFamily="Roboto Thin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:text="Current Status"
+            android:gravity="right"
+            android:textSize="12sp"
+            android:fontFamily="Roboto Thin"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/editText5"
+            android:layout_alignRight="@+id/editText5"
+            android:layout_alignEnd="@+id/editText5"
+            android:layout_marginTop="15dp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lets Start"
+        android:id="@+id/letsStartGoal"
+        android:layout_alignLeft="@+id/q"
+        android:layout_alignStart="@+id/q"
+        android:layout_alignRight="@+id/q"
+        android:layout_alignEnd="@+id/q"
+        android:layout_below="@+id/q"
+        android:background="#576BAE"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
