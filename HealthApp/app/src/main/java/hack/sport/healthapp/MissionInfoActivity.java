@@ -1,5 +1,6 @@
 package hack.sport.healthapp;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -59,5 +60,11 @@ public class MissionInfoActivity extends AppCompatActivity implements View.OnCli
         UserDetailsModel.userData.setGoals(data);
 
         Toast.makeText(this, data, Toast.LENGTH_LONG).show();
+
+        Intent processingIntent = new Intent(this, ProcessingActivity.class);
+        processingIntent.putExtra("message", "Processing your goal.");
+        processingIntent.putExtra("time", 5);
+        startActivity(processingIntent);
+
     }
 }

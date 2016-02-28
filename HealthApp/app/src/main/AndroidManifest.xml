@@ -33,7 +33,9 @@
         </activity>
         <activity android:name=".ProfileInfoActivity" />
         <activity android:name=".MissionDecisionActivity" />
-        <activity android:name=".MissionInfoActivity"></activity>
+        <activity android:name=".MissionInfoActivity" />
+        <activity android:name=".ProcessingActivity" />
+        <activity android:name=".FeedbackActivity"></activity>
     </application>
 
 </manifest>
